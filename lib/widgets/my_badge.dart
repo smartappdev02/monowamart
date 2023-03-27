@@ -54,7 +54,10 @@ class MyBadge {
         child: IconButton(
             onPressed: () =>
                 Navigator.of(context).pushNamed(RouteName.cartScreen),
-            icon: Icon(mCartIcon)),
+            icon: Icon(
+              mCartIcon,
+              color: Colors.black,
+            )),
       ),
     );
   }

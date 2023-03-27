@@ -14,11 +14,12 @@ import 'package:monowamart/providers/cart_provider.dart';
 import 'package:monowamart/providers/product_provider.dart';
 import 'package:monowamart/providers/wishlist_provider.dart';
 import 'package:monowamart/screens/inner_screens/cart.dart';
-import 'package:monowamart/screens/inner_screens/product_detail.dart';
+import 'package:monowamart/screens/inner_screens/product_details/product_detail.dart';
 import 'package:monowamart/screens/feeds.dart';
 import 'package:monowamart/screens/log_in.dart';
 import 'package:monowamart/screens/sign_up.dart';
 import 'package:monowamart/screens/wishlist.dart';
+import 'package:sizer/sizer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,44 +37,84 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (BuildContext context) {
-          return ThemeChangeProvider(isDarkTheme);
-        },
-        child: MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (_) => AuthProvider()),
-            ChangeNotifierProvider(create: (_) => UserDataProvider()),
-            ChangeNotifierProvider(create: (_) => ProductProvider()),
-            ChangeNotifierProvider(create: (_) => CartProvider()),
-            ChangeNotifierProvider(create: (_) => WishlistProvider()),
-          ],
-          child: Consumer<ThemeChangeProvider>(
-            builder: (_, themeChangeProvider, __) {
-              return MaterialApp(
-                debugShowCheckedModeBanner: false,
-                title: 'Store App',
-                theme: Styles.getThemeData(themeChangeProvider.isDarkTheme),
-                routes: {
-                  RouteName.mainScreen: (context) => MainScreen(),
-                  RouteName.bottomBarScreen: (context) => BottomBarScreen(),
-                  RouteName.logInScreen: (contex) => const LogInScreen(),
-                  RouteName.signUpScreen: (context) => const SignUpScreen(),
-                  RouteName.forgotPasswordScreen: (context) =>
-                      const ForgotPasswordScreen(),
-                  RouteName.productDetailScreen: (context) =>
-                      const ProductDetailScreen(),
-                  RouteName.feedsScreen: (context) => FeedsScreen(),
-                  RouteName.cartScreen: (context) => CartScreen(),
-                  RouteName.wishlistScreen: (context) => const WishlistScreen(),
-                  RouteName.categoryScreen: (context) => CategoryScreen(),
-                },
-              );
-            },
-          ),
-        ));
+    return Sizer(builder: (context, orientation, deviceType) {
+      return ChangeNotifierProvider(
+          create: (BuildContext context) {
+            return ThemeChangeProvider(isDarkTheme);
+          },
+          child: MultiProvider(
+            providers: [
+              ChangeNotifierProvider(create: (_) => AuthProvider()),
+              ChangeNotifierProvider(create: (_) => UserDataProvider()),
+              ChangeNotifierProvider(create: (_) => ProductProvider()),
+              ChangeNotifierProvider(create: (_) => CartProvider()),
+              ChangeNotifierProvider(create: (_) => WishlistProvider()),
+            ],
+            child: Consumer<ThemeChangeProvider>(
+              builder: (_, themeChangeProvider, __) {
+                return MaterialApp(
+                  debugShowCheckedModeBanner: false,
+                  title: 'Store App',
+                  theme: Styles.getThemeData(themeChangeProvider.isDarkTheme),
+                  routes: {
+                    RouteName.mainScreen: (context) => MainScreen(),
+                    RouteName.bottomBarScreen: (context) => BottomBarScreen(),
+                    RouteName.logInScreen: (contex) => const LogInScreen(),
+                    RouteName.signUpScreen: (context) => const SignUpScreen(),
+                    RouteName.forgotPasswordScreen: (context) =>
+                        const ForgotPasswordScreen(),
+                    RouteName.productDetailScreen: (context) =>
+                        const ProductDetailScreen(),
+                    RouteName.feedsScreen: (context) => FeedsScreen(),
+                    RouteName.cartScreen: (context) => CartScreen(),
+                    RouteName.wishlistScreen: (context) =>
+                        const WishlistScreen(),
+                    RouteName.categoryScreen: (context) => CategoryScreen(),
+                  },
+                );
+              },
+            ),
+          ));
+    });
   }
 }
+
+/// return ChangeNotifierProvider(
+//         create: (BuildContext context) {
+//           return ThemeChangeProvider(isDarkTheme);
+//         },
+//         child: MultiProvider(
+//           providers: [
+//             ChangeNotifierProvider(create: (_) => AuthProvider()),
+//             ChangeNotifierProvider(create: (_) => UserDataProvider()),
+//             ChangeNotifierProvider(create: (_) => ProductProvider()),
+//             ChangeNotifierProvider(create: (_) => CartProvider()),
+//             ChangeNotifierProvider(create: (_) => WishlistProvider()),
+//           ],
+//           child: Consumer<ThemeChangeProvider>(
+//             builder: (_, themeChangeProvider, __) {
+//               return MaterialApp(
+//                 debugShowCheckedModeBanner: false,
+//                 title: 'Store App',
+//                 theme: Styles.getThemeData(themeChangeProvider.isDarkTheme),
+//                 routes: {
+//                   RouteName.mainScreen: (context) => MainScreen(),
+//                   RouteName.bottomBarScreen: (context) => BottomBarScreen(),
+//                   RouteName.logInScreen: (contex) => const LogInScreen(),
+//                   RouteName.signUpScreen: (context) => const SignUpScreen(),
+//                   RouteName.forgotPasswordScreen: (context) =>
+//                       const ForgotPasswordScreen(),
+//                   RouteName.productDetailScreen: (context) =>
+//                       const ProductDetailScreen(),
+//                   RouteName.feedsScreen: (context) => FeedsScreen(),
+//                   RouteName.cartScreen: (context) => CartScreen(),
+//                   RouteName.wishlistScreen: (context) => const WishlistScreen(),
+//                   RouteName.categoryScreen: (context) => CategoryScreen(),
+//                 },
+//               );
+//             },
+//           ),
+//         ));
 
 // class MyApp extends StatelessWidget {
 //   final bool isDarkTheme;
