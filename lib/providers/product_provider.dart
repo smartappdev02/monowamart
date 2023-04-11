@@ -10,8 +10,12 @@ class ProductProvider with ChangeNotifier {
         description:
             'Samsung Galaxy A51 (128GB, 4GB) 6.5", 48MP Quad Camera, Dual SIM GSM Unlocked A515F/DS- Global 4G LTE International Model - Prism Crush Blue.',
         price: 50.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/61pwpYcjYlL._AC_SL1000_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/61pwpYcjYlL._AC_SL1000_.jpg'
+              'https://images-na.ssl-images-amazon.com/images/I/61pwpYcjYlL._AC_SL1000_.jpg'
+              'https://images-na.ssl-images-amazon.com/images/I/61pwpYcjYlL._AC_SL1000_.jpg'
+              'https://images-na.ssl-images-amazon.com/images/I/61pwpYcjYlL._AC_SL1000_.jpg'
+        ],
         brand: 'Samsung',
         category: 'Phones',
         quantity: 6423,
@@ -23,8 +27,10 @@ class ProductProvider with ChangeNotifier {
         description:
             '6 GB + 128 GB, Dual Sim, Alexa Hands-Free, Grigio (Lunar Silver)',
         price: 900.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/710VBlX63PL._AC_SL1500_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/710VBlX63PL._AC_SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/710VBlX63PL._AC_SL1500_.jpg',
+        ],
         brand: 'Xiaomi',
         category: 'Phones',
         quantity: 3,
@@ -36,7 +42,9 @@ class ProductProvider with ChangeNotifier {
         description:
             'New Apple iPhone 12 Pro (512GB, Gold) [Locked] + Carrier Subscription',
         price: 1100,
-        imageUrl: 'https://m.media-amazon.com/images/I/71cSV-RTBSL.jpg',
+        images: [
+          'https://m.media-amazon.com/images/I/71cSV-RTBSL.jpg',
+        ],
         brand: 'Apple',
         category: 'Phones',
         quantity: 3,
@@ -48,8 +56,9 @@ class ProductProvider with ChangeNotifier {
         description:
             'New Apple iPhone 12 Pro Max (128GB, Graphite) [Locked] + Carrier Subscription',
         price: 50.99,
-        imageUrl:
-            'https://m.media-amazon.com/images/I/71XXJC7V8tL._FMwebp__.jpg',
+        images: [
+          'https://m.media-amazon.com/images/I/71XXJC7V8tL._FMwebp__.jpg',
+        ],
         brand: 'Apple',
         category: 'Phones',
         quantity: 2654,
@@ -61,8 +70,9 @@ class ProductProvider with ChangeNotifier {
         description:
             'Slim Laptop | 15.6" Full HD Display | 11th Gen Intel Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Amazon Alexa | Windows 10 Home (S Mode)',
         price: 399.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/618Vf68HW%2BL._AC_SL1212_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/618Vf68HW%2BL._AC_SL1212_.jpg',
+        ],
         brand: 'Acer',
         category: 'Computer',
         quantity: 123,
@@ -74,8 +84,13 @@ class ProductProvider with ChangeNotifier {
         description:
             '4K Ultra HD LED Smart Google TV with Dolby Vision HDR and Alexa Compatibility KD65X80J- 2021 Model',
         price: 809.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/91RfzivKmwL._AC_SL1500_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/91RfzivKmwL._AC_SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91RfzivKmwL._AC_SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91RfzivKmwL._AC_SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91RfzivKmwL._AC_SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91RfzivKmwL._AC_SL1500_.jpg',
+        ],
         brand: 'Sony',
         category: 'Electronics',
         quantity: 20,
@@ -86,8 +101,13 @@ class ProductProvider with ChangeNotifier {
         name: 'Long Sleeve Beefy Henley Shirt',
         description: 'Hanes Men\'s Long Sleeve Beefy Henley Shirt ',
         price: 22.30,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/91YHIgoKb4L._AC_UX425_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/91YHIgoKb4L._AC_UX425_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91YHIgoKb4L._AC_UX425_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91YHIgoKb4L._AC_UX425_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91YHIgoKb4L._AC_UX425_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/91YHIgoKb4L._AC_UX425_.jpg',
+        ],
         brand: 'No brand',
         category: 'Clothes',
         quantity: 58466,
@@ -98,8 +118,13 @@ class ProductProvider with ChangeNotifier {
         name: 'Weave Jogger',
         description: 'Champion Mens Reverse Weave Jogger',
         price: 58.99,
-        imageUrl:
-            'https://m.media-amazon.com/images/I/71g7tHQt-sL._AC_UL320_.jpg',
+        images: [
+          'https://m.media-amazon.com/images/I/71g7tHQt-sL._AC_UL320_.jpg',
+          'https://m.media-amazon.com/images/I/71g7tHQt-sL._AC_UL320_.jpg',
+          'https://m.media-amazon.com/images/I/71g7tHQt-sL._AC_UL320_.jpg',
+          'https://m.media-amazon.com/images/I/71g7tHQt-sL._AC_UL320_.jpg',
+          'https://m.media-amazon.com/images/I/71g7tHQt-sL._AC_UL320_.jpg',
+        ],
         brand: 'H&M',
         category: 'Clothes',
         quantity: 84894,
@@ -111,8 +136,12 @@ class ProductProvider with ChangeNotifier {
         description:
             'NIKE Men\'s Tanjun Sneakers, Breathable Textile Uppers and Comfortable Lightweight Cushioning ',
         price: 191.89,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/71KVPm5KJdL._AC_UX500_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/71KVPm5KJdL._AC_UX500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/71KVPm5KJdL._AC_UX500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/71KVPm5KJdL._AC_UX500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/71KVPm5KJdL._AC_UX500_.jpg',
+        ],
         brand: 'Nike',
         category: 'Shoes',
         quantity: 65489,
@@ -123,8 +152,12 @@ class ProductProvider with ChangeNotifier {
         name: 'Training Pant Female',
         description: 'Nike Epic Training Pant Female ',
         price: 189.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/61jvFw72OVL._AC_UX466_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/61jvFw72OVL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/61jvFw72OVL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/61jvFw72OVL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/61jvFw72OVL._AC_UX466_.jpg',
+        ],
         brand: 'Nike',
         category: 'Clothes',
         quantity: 89741,
@@ -135,8 +168,12 @@ class ProductProvider with ChangeNotifier {
         name: 'Trefoil Tee',
         description: 'Originals Women\'s Trefoil Tee ',
         price: 88.88,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/51KMhoElQcL._AC_UX466_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/51KMhoElQcL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/51KMhoElQcL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/51KMhoElQcL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/51KMhoElQcL._AC_UX466_.jpg',
+        ],
         brand: 'Addidas',
         category: 'Clothes',
         quantity: 8941,
@@ -147,8 +184,12 @@ class ProductProvider with ChangeNotifier {
         name: 'Long Sleeve woman',
         description: ' Boys\' Long Sleeve Cotton Jersey Hooded T-Shirt Tee',
         price: 68.29,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/71lKAfQDUoL._AC_UX466_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/71lKAfQDUoL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/71lKAfQDUoL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/71lKAfQDUoL._AC_UX466_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/71lKAfQDUoL._AC_UX466_.jpg',
+        ],
         brand: 'Addidas',
         category: 'Clothes',
         quantity: 3,
@@ -160,8 +201,12 @@ class ProductProvider with ChangeNotifier {
         description:
             'Olay Ultimate Eye Cream for Wrinkles, Puffy Eyes + Dark Circles, 0.4 fl oz',
         price: 54.98,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/61dwB-2X-6L._SL1500_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/61dwB-2X-6L._SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/61dwB-2X-6L._SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/61dwB-2X-6L._SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/61dwB-2X-6L._SL1500_.jpg',
+        ],
         brand: 'No brand',
         category: 'Beauty & health',
         quantity: 8515,
@@ -173,114 +218,16 @@ class ProductProvider with ChangeNotifier {
         description:
             'The Body Shop Mango Body Yogurt, 48hr Moisturizer, 100% Vegan, 6.98 Fl.Oz',
         price: 80.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/81w9cll2RmL._SL1500_.jpg',
+        images: [
+          'https://images-na.ssl-images-amazon.com/images/I/81w9cll2RmL._SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/81w9cll2RmL._SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/81w9cll2RmL._SL1500_.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/81w9cll2RmL._SL1500_.jpg',
+        ],
         brand: 'No brand',
         category: 'Beauty & health',
         quantity: 3,
         sales: 2300,
-        isPopular: false),
-    ProductModel(
-        id: 'Food Intensive Skin',
-        name: 'Food Intensive Skin',
-        description:
-            'Weleda Skin Food Intensive Skin Nourishment Body Butter, 5 Fl Oz',
-        price: 50.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/71E6h0kl3ZL._SL1500_.jpg',
-        brand: 'No Brand',
-        category: 'Beauty & health',
-        quantity: 38425,
-        sales: 238,
-        isPopular: true),
-    ProductModel(
-        id: 'Ultra Shea Body Cream',
-        name: 'Ultra Shea Body Cream',
-        description:
-            'Bath and Body Works IN THE STARS Ultra Shea Body Cream (Limited Edition) 8 Ounce ',
-        price: 14,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/61RkTTLRnNL._SL1134_.jpg',
-        brand: '',
-        category: 'Beauty & health',
-        quantity: 384,
-        sales: 2300,
-        isPopular: false),
-    ProductModel(
-        id: 'Soft Moisturizing Crème',
-        name: 'Soft Moisturizing Crème',
-        description:
-            'NIVEA Soft Moisturizing Crème- Pack of 3, All-In-One Cream For Body, Face and Dry Hands - Use After Hand Washing - 6.8 oz. Jars',
-        price: 50.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/619pgKveCdL._SL1500_.jpg',
-        brand: 'No Brand',
-        category: 'Beauty & health',
-        quantity: 45,
-        sales: 2300,
-        isPopular: true),
-    ProductModel(
-        id: 'Body Cream Cocoa Butter',
-        name: 'Body Cream Cocoa Butter',
-        description: 'NIVEA Cocoa Butter Body Cream 15.5 Oz',
-        price: 84.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/61EsS5sSaCL._SL1500_.jpg',
-        brand: 'No brand',
-        category: 'Beauty & health',
-        quantity: 98432,
-        sales: 8782,
-        isPopular: true),
-    ProductModel(
-        id: 'Skin Repair Body Lotion',
-        name: 'Skin Repair Body Lotion',
-        description:
-            'O\'Keeffe\'s Skin Repair Body Lotion and Dry Skin Moisturizer, Pump Bottle, 12 ounce, Packaging May Vary',
-        price: 890.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/71e7ksQ-xyL._AC_SL1500_.jpg',
-        brand: 'No brand',
-        category: 'Beauty & health',
-        quantity: 3811,
-        sales: 2300,
-        isPopular: false),
-    ProductModel(
-        id: 'Indomie Mi Goreng Instant Stir Fry Noodles',
-        name: 'Indomie Mi Goreng Instant Stir Fry Noodles',
-        description:
-            'INCLUDES: 30 individually wrapped packets of Indomie Mi Goreng noodles. CALORIES: 390 Calories per serving. Each serving is (1) individual packet. ALLERGEN CALLOUTS: Preservatives, Sesame, Sesame Oil, Soy, Soybean, Wheat. HALAL: Halal certified. COOKING INSTRUCTIONS: Boil noodles for 3 minutes in water. Drain noodles. Empty condiment contents into pan on medium heat. Return noodles into pan and stir fry quickly for 1 - 2 minutes, evenly coating noodles. Enjoy!',
-        price: 13.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/71B4YNvwCtL._SL1500_.jpg',
-        brand: 'Indomie',
-        category: 'Food',
-        quantity: 3811,
-        sales: 2293,
-        isPopular: true),
-    ProductModel(
-        id: 'Coca-Cola Coke Soda',
-        name: 'Coca-Cola Coke Soda',
-        description: 'Made in USA.12 cans per pack',
-        price: 20.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/51uJdR27f7L._AC_UX466_.jpg',
-        brand: 'Coca-Cola',
-        category: 'Drinks',
-        quantity: 380,
-        sales: 93,
-        isPopular: true),
-    ProductModel(
-        id: 'FITFORT Jump Rope',
-        name: 'FITFORT Jump Rope',
-        description:
-            'Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women',
-        price: 9.99,
-        imageUrl:
-            'https://images-na.ssl-images-amazon.com/images/I/71wm42EtoNL._AC_SL1500_.jpg',
-        brand: 'Fitfort',
-        category: 'Sport',
-        quantity: 373,
-        sales: 43,
         isPopular: false),
   ];
 
@@ -301,7 +248,7 @@ class ProductProvider with ChangeNotifier {
       .where(
           (element) => element.name.toLowerCase().contains(query.toLowerCase()))
       .toList();
- 
+
   Future<void> fetchProducts() async {
     // await FirebaseFirestore.instance
     //     .collection('products')

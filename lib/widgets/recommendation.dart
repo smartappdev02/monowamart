@@ -31,7 +31,7 @@ class _RecommendationState extends State<Recommendation> {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     image: DecorationImage(
-                        image: NetworkImage(_product.imageUrl),
+                        image: NetworkImage(_product.images[0]),
                         fit: BoxFit.contain)),
               ),
               Container(

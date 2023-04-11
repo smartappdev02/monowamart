@@ -32,7 +32,7 @@ class FeedsDialog extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         image: DecorationImage(
-                            image: NetworkImage(_product.imageUrl),
+                            image: NetworkImage(_product.images[0]),
                             fit: BoxFit.contain)),
                   ),
                   Positioned(
@@ -61,7 +61,7 @@ class FeedsDialog extends StatelessWidget {
                             onTap: () =>
                                 wishlistProvider.addAndRemoveItem(WishlistModel(
                               id: _product.id,
-                              imageUrl: _product.imageUrl,
+                              imageUrl: _product.images[0],
                               name: _product.name,
                               price: _product.price,
                               sales: _product.sales,
@@ -85,7 +85,7 @@ class FeedsDialog extends StatelessWidget {
                             onTap: () =>
                                 cartProvider.addAndRemoveItem(CartModel(
                               id: _product.id,
-                              imageUrl: _product.imageUrl,
+                              imageUrl: _product.images[0],
                               name: _product.name,
                               price: _product.price,
                             )),

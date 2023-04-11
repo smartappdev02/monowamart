@@ -35,7 +35,7 @@ class PopularProduct extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           image: DecorationImage(
-                            image: NetworkImage(_popularProduct.imageUrl),
+                            image: NetworkImage(_popularProduct.images[0]),
                             fit: BoxFit.contain,
                           )),
                     ),
@@ -77,7 +77,7 @@ class PopularProduct extends StatelessWidget {
                                   : () {
                                       cartProvider.addAndRemoveItem(CartModel(
                                           id: _popularProduct.id,
-                                          imageUrl: _popularProduct.imageUrl,
+                                          imageUrl: _popularProduct.images[0],
                                           name: _popularProduct.name,
                                           price: _popularProduct.price));
                                       new MySnackBar().showSnackBar(
@@ -100,7 +100,7 @@ class PopularProduct extends StatelessWidget {
                               onPressed: () {
                                 wishlistProvider.addAndRemoveItem(WishlistModel(
                                   id: _popularProduct.id,
-                                  imageUrl: _popularProduct.imageUrl,
+                                  imageUrl: _popularProduct.images[0],
                                   name: _popularProduct.name,
                                   price: _popularProduct.price,
                                   sales: _popularProduct.sales,

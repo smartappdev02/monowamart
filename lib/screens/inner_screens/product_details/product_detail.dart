@@ -13,6 +13,7 @@ import 'package:monowamart/widgets/my_badge.dart';
 import 'package:monowamart/widgets/recommendation.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
+import 'product_image.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   const ProductDetailScreen({Key? key}) : super(key: key);
@@ -74,44 +75,45 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         ),
         body: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              expandedHeight: MediaQuery.of(context).size.width,
-              pinned: true,
-              elevation: 0,
-              backgroundColor: Theme.of(context).cardColor,
-              flexibleSpace: FlexibleSpaceBar(
-                  background: Container(
-                color: Colors.white,
-                child: Image.network(
-                  _product.imageUrl,
-                  fit: BoxFit.contain,
-                ),
-              )),
-              //actions: [MyBadge.cart(context)],
-              actions: [
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Row(
-                    children: [
-                      const Text(
-                        "4.0", //will have to fetch from provider
-                        style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black),
-                      ),
-                      const SizedBox(width: 5),
-                      SvgPicture.asset("assets/icons/Star Icon.svg"),
-                    ],
-                  ),
-                )
-              ],
-            ),
+            ProductImages(product: _product),
+            // SliverAppBar(
+            //   expandedHeight: MediaQuery.of(context).size.width,
+            //   pinned: true,
+            //   elevation: 0,
+            //   backgroundColor: Theme.of(context).cardColor,
+            //   flexibleSpace: FlexibleSpaceBar(
+            //       background: Container(
+            //     color: Colors.white,
+            //     child: Image.network(
+            //       _product.images[0],
+            //       fit: BoxFit.contain,
+            //     ),
+            //   )),
+            //   //actions: [MyBadge.cart(context)],
+            //   actions: [
+            //     Container(
+            //       padding:
+            //           const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            //       decoration: BoxDecoration(
+            //         color: Colors.white,
+            //         borderRadius: BorderRadius.circular(14),
+            //       ),
+            //       child: Row(
+            //         children: [
+            //           const Text(
+            //             "4.0", //will have to fetch from provider
+            //             style: TextStyle(
+            //                 fontSize: 14,
+            //                 fontWeight: FontWeight.w600,
+            //                 color: Colors.black),
+            //           ),
+            //           const SizedBox(width: 5),
+            //           SvgPicture.asset("assets/icons/Star Icon.svg"),
+            //         ],
+            //       ),
+            //     )
+            //   ],
+            // ),
             SliverToBoxAdapter(
                 child: SingleChildScrollView(
               child: Container(
@@ -165,7 +167,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                       wishlistProvider
                                           .addAndRemoveItem(WishlistModel(
                                         id: _productId,
-                                        imageUrl: _product.imageUrl,
+                                        imageUrl: _product.images[0],
                                         name: _product.name,
                                         price: _product.price,
                                         sales: _product.sales,
@@ -311,7 +313,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     : () {
                         _cartProvider.addAndRemoveItem(CartModel(
                             id: product.id,
-                            imageUrl: product.imageUrl,
+                            imageUrl: product.images[0],
                             name: product.name,
                             price: product.price));
                         MySnackBar().showSnackBar('Added to cart', context);
